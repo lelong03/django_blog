@@ -9,9 +9,10 @@
                 {{ post.title }}
             </a>
         </h2>
-            <p class="date">
+        <p class="tags">Tags: {{ post.tags.all|join:", " }}</p>
+        <p class="date">
             Published {{ post.publish }} by {{ post.author }}
-            </p>
+        </p>
         {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
 
